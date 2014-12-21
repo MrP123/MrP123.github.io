@@ -1,0 +1,108 @@
+body {
+    background-color: #353535;
+    overflow : hidden;
+    font-family : helvetica, arial, sans-serif;
+}
+
+.hidden { display : none; }
+
+a {
+    color : #555;
+    font-weight : bold;
+    text-decoration : none;
+}
+
+a:hover {
+    text-decoration : underline;
+}
+
+#main-editor.editor, #ending-editor.editor {
+    position : absolute;
+
+    top : 10%;
+    bottom : 32%;
+    left : 2%;
+    right : 2%;
+
+    margin : 0;
+    font-size : 1.5em;
+    text-align : left;
+}
+
+#ending-editor.editor {
+    top : 12%;
+    bottom : 0%;
+    font-size : 1.2em;
+}
+
+#begin-pane {
+    position : absolute;
+    background-image : url('escheresque-light.png');
+
+    top : 50px;
+    left : 25%;
+    right: 25%;
+
+    padding : 1em;
+    font-size : 1.2em;
+
+    border : 1px solid;
+    border-width : 1px;
+}
+
+#end-pane {
+    height : 100%;
+    color : white;
+    background-image : inherit;
+    border : inherit;
+
+    text-align : center;
+    font-size : 1.2em;
+}
+
+#timer {
+    color : red;
+    font-size : 3em;
+    text-align : center; /* YOU GOT A PROBLEM? */
+    text-shadow : -1px -1px 4px rgba(255, 150, 150, 1)
+}
+.win #timer {
+    color : green;
+    text-shadow : -1px -1px 4px rgba(150, 255, 150, 1)
+}
+
+#log-wrapper {
+    position : absolute;
+
+    top    : 70%;
+    bottom : 2%;
+    left   : 2%;
+    right  : 2%;
+
+    margin  : 0;
+    padding : 10px;
+
+    background : #ffe;
+    font-size : 1.2em;
+    font-family : monospace;
+
+    overflow-y : scroll;
+}
+#log-wrapper .log-line {
+    padding : 4px;
+}
+
+#log-wrapper .log-line.log-pass {
+    color : white;
+    background : #5e740b;
+}
+#log-wrapper .log-line.log-fail {
+    color : white;
+    background : #710909;
+}
+#log-wrapper .log-line.log-error {
+    background : #b06000;
+}
+#log-wrapper .log-line.log-log {
+    background : #8699a4;
+}
